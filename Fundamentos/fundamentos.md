@@ -32,9 +32,11 @@ usuario = {"nome": "Renan", "idade": 21, "cidade": "Recife"}
 
 # Conjunto (set)
 numeros_unicos = {1, 2, 3, 3, 4}
+```
 
 ### ✅ Estruturas de Controle 
 
+```python
 # Condicional
 if idade >= 18:
     print("Maior de idade")
@@ -58,8 +60,11 @@ for i in range(5):
     if i == 1:
         continue  # Pula a iteração
     print(i)
+```
 
 ### ✅Funções e Escopo de Variáveis
+
+```python
 # Função simples
 def boas_vindas(nome):
     print(f"Olá, {nome}!")
@@ -100,8 +105,11 @@ def mostrar_valor():
 
 mostrar_valor()
 print("Fora da função:", x)
+```
 
 ### ✅Manipulação de Strings
+
+```python
 texto = "  Olá, Python!  "
 
 # Métodos úteis
@@ -117,8 +125,11 @@ print(texto[4:10])          # Pega caracteres entre as posições
 # Interpolação
 nome = "Renan"
 print(f"Seja bem-vindo, {nome}!")
+```
 
 ### ✅Manipulação de Arquivos
+
+```python
 # Escrita
 with open("arquivo.txt", "w") as f:
     f.write("Primeira linha\nSegunda linha")
@@ -131,8 +142,11 @@ with open("arquivo.txt", "r") as f:
 # Adição
 with open("arquivo.txt", "a") as f:
     f.write("\nTerceira linha adicionada")
+```
 
 ### ✅Módulos e Pacotes
+
+```python
 try:
     resultado = 10 / 0
 except ZeroDivisionError:
@@ -147,8 +161,11 @@ def dividir(a, b):
     if b == 0:
         raise ValueError("O denominador não pode ser zero.")
     return a / b
+```
 
 ### ✅Tratamento de Erros
+
+```python
 try:
     resultado = 10 / 0
 except ZeroDivisionError:
@@ -163,5 +180,5 @@ def dividir(a, b):
     if b == 0:
         raise ValueError("O denominador não pode ser zero.")
     return a / b
-
+```
 
