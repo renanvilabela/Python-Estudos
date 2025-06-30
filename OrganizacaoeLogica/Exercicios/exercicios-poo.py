@@ -68,3 +68,34 @@ class Carro:
     
     def exibir_status(self):
         print(f"Carro: {self.__marca} {self.__modelo} ({self.__ano}, Velocidade: {self.__velocidade} km/h)")
+
+c1 = Carro("Toyota", "Corolla", 2020)
+c1.exibir_status()  # Exibe os dados do carro
+
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.__titular = titular
+        self.__saldo = saldo
+    def depositar(self, valor):
+        if valor > 0:
+            self.__saldo += valor
+            print(f"Depósito de R$ {valor:.2f} realizado com sucesso.")
+        else:
+            print("Valor de depósito inválido.")
+    def ver_saldo(self):
+        print(f"Saldo atual de {self.__titular}: R$ {self.__saldo:.2f}")
+    def sacar(self, valor):
+        if 0 < valor <= self.__saldo:
+            self.__saldo -= valor
+            print(f"Saque de R$ {valor:.2f} realizado com sucesso.")
+        else:
+            print("Valor de saque inválido ou saldo insuficiente.")
+
+c2 = ContaBancaria("João", 1000.00)
+c2.ver_saldo()  # Exibe o saldo atual
+c2.depositar(500.00)  # Deposita R$ 500,00
+c2.ver_saldo()  # Exibe o saldo atualizado
+c2.sacar(200.00)  # Saca R$ 200,00
+c2.ver_saldo()  # Exibe o saldo atualizado após o saque
+c2.sacar(1500.00)  # Tenta sacar um valor maior que o saldo
+c2.ver_saldo()  # Exibe o saldo após tentativa de saque inválido
