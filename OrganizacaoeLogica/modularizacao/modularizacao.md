@@ -9,3 +9,8 @@
 
 # Teste unitário isolado
 
+# 🧠 Dicas de Boas Práticas
+# ✅ Nomeie os arquivos com letras minúsculas
+# ✅ Use nomes de funções descritivos
+# ✅ Agrupe funções com propósito semelhante em um único módulo
+# ✅ Utilize pacotes para organizar melhor módulos relacionados
