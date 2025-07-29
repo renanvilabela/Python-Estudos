@@ -5,7 +5,11 @@ import time
 navegador = webdriver.Chrome()
 
 # acessar um site
-navegador.get("https://github.com/renanvilabela")
+navegador.get("https://www.hashtagtreinamentos.com/")
 
 navegador.maximize_window()
-time.sleep(7)
+botao_verde = navegador.find_element("class name", "botao-verde")
+
+botao_verde.click()
+
+time.sleep(10)
