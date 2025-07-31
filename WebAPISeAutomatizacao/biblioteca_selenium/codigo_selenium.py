@@ -5,15 +5,22 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # abrir o navegador
-navegador = webdriver.Chrome()
-navegador.get("https://www.hashtagtreinamentos.com/")
-navegador.maximize_window()
+driver = webdriver.Chrome()
+driver.get("https://github.com/renanvilabela")
+driver.maximize_window()
 
-# espera o botão carregar
-wait = WebDriverWait(navegador, 20)
-botao_verde = wait.until(EC.presence_of_element_located((By.XPATH, '//a[contains(@class, "botao-verde")]')))
+try:
+    wait = WebDriverWait(driver, 10)
 
-# força o clique via JavaScript
-navegador.execute_script("arguments[0].click();", botao_verde)
+    botao_repos = wait.until(
+        EC.element_to_be_clickable((By.XPATH, "//a[@href='/renanvilabela?tab=repositories']"))
+    )
 
-time.sleep(10)
+    botao_repos.click()
+    print("Botão de repositórios clicado com sucesso!")
+
+except Exception as e:
+    print(f"Ocorreu um erro: {e}")
+
+time.sleep(5)
+driver.quit()
