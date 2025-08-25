@@ -10,7 +10,7 @@ ${UPDATE_PRODUCT}    products/id-produto
 
 *** Keywords ***
 Atualizar um produto
-    [Arguments]    ${id}    ${title}    ${description}    ${price}    ${brand}
+    [Arguments]    ${id}    ${title}    ${price}    ${brand}    ${description}=none
 
     Create Session    api    ${HOST}
 
@@ -26,4 +26,4 @@ Atualizar um produto
 
 *** Test Cases ***
 TC01 - Realizar atualização de um produto
-    Atualizar um produto    88    Iphone 13    Celular Apple    7000    Apple
+    Atualizar um produto    88    Iphone 13    7000    Apple
