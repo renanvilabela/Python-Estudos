@@ -1,3 +1,8 @@
+# Ignorar todos os HTML
 *.html
+
+# Ignorar todos os XML
 *.xml
+
+# Ignorar todos os arquivos de log
 *.log
